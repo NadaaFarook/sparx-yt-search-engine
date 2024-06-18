@@ -12,14 +12,6 @@ from llama_index.core import (
 import os
 from openai import OpenAI
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-openai_key = os.getenv('OPENAI_API_KEY')
-
-os.environ["OPENAI_API_KEY"] = (openai_key)
-
 import toml
 primaryColor = toml.load(".streamlit/config.toml")['theme']['primaryColor']
 custom_css = f"""
